@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color:white;
+    }
+    .container {
+      max-width: 400px;
+      margin-top: 40px;
+      background-color: light yellow;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-heading {
+      text-align: center;
+      color:black;
+    }
+    .image{
+      background-image: url(https://img.freepik.com/free-photo/workspace-with-office-supplies-top-view_144627-32488.jpg?w=900&t=st=1706327128~exp=1706327728~hmac=793c76c01a1748e8d5b713da78332a443d5f27d1e855365bc07644d738fe5cc7);
+    }
     
+    .form-label {
+      font-weight: bold;
+    }
+    
+  </style>
+  <title>Student Details Form</title>
 </head>
-<style>
-    table{
-        border-collapse: collapse;
-        width: 20;
-    }
-    th,td{
-        
-        text-align: left;
-        border:1px solid black;
-    }
-    th{
-        text-align: center;
-    }
-</style>
 <body>
-    <table>
-     <form>
-      <tr> 
-        <th colspan="2">Registration Form</th>
-      </tr>
-
-      <tr>
-        <td><label for="Student Name">Student name</label</td>
-        <td><input type="text" name="Student name" id="Student Name"></td>
-      </tr>
-
-      <tr>
-        <td><label for="Father's Name" >Father's Name</label></td>
-        <td><input type="text" name="Father's Name" id="Father's Name"></td>
-      </tr>
-
-      <tr>
-        <td><label for="Mother's Name">Mother's Name</label></td>
-        <td><input type="text" name="Mother's Name" id="Mother's Name"></td>
-      </tr>
-
-      <tr>
-         <td><label for="Date of birth">Date of birth</label></td>
-         <td><input type="date" name="Date of birth" id="Date of birth"></td>
-      </tr>
-
-      <tr>
-         <td><legend>Gender</legend></td>
-         <td><label for="male">male</label><input type="radio" name="male" id="male"><label for="female">female</label><input type="radio" name="female" id="female"></td>
-      </tr>
-
-      <tr>
-        <td><label for="Email id">Email id</label></td>
-        <td><input type="text" name="Email id" id="Email id"></td>
-      </tr>
-        
-      <tr>
-        <td><label for="Mobile No" >Mobile No</label></td>
-        <td><input type="tel" name="Mobile No" id="Mobile No"></td>
-      </tr>
-    
-      <tr>
-        <td><label for="Address">Address</label></td>
-        <td><input type="text" name="Address" id="Address"></td>
-      </tr>
-      <tr>
-        <td><label for="state">state</label></td>
-        <td><input type="text" name="state" id="state"></td>
-      </tr>
-
-      <tr>
-        <td><label for="city" >City</label></td>
-        <td><input type="text" name="city" id="city"></td>
-      </tr>
-
-      <tr>
-        <td>&nbsp;</td>
-        <td><button>Submit</button></td>
-      </tr>
+<div class="image">
+<div class="container">
+  <h2 class="form-heading mb-4">Student Details</h2>
+  <form>
+    <div class="mb-3">
+      <label for="studentName" class="form-label">Student Name</label>
+      <input type="text" class="form-control" id="studentName" placeholder="Enter student name" required>
+    </div>
+    <div class="mb-3">
+      <label for="studentAge" class="form-label">Student Age</label>
+      <input type="number" class="form-control" id="studentAge" placeholder="Enter student age" required>
+    </div>
+    <div class="mb-3">
+      <label for="studentDOB" class="form-label">Student Date of Birth</label>
+      <input type="date" class="form-control" id="studentDOB" required>
+    </div>
+    <div class="mb-3">
+      <label for="qualification" class="form-label">Qualification</label>
+      <input type="text" class="form-control" id="qualification" placeholder="Enter qualification" required>
+    </div>
+    <div class="mb-3">
+      <label for="passedOutYear" class="form-label">Passed Out Year</label>
+      <select class="form-select" id="passedOutYear" required>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="universityName" class="form-label">University Name</label>
+      <input type="text" class="form-control" id="universityName" placeholder="Enter university name" required>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image Upload</label>
+      <input type="file" class="form-control" id="image" accept="image/*">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-</table>
-    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
